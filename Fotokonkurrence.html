@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DMJU Fotokonkurrence</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Icons (for social links) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Archivo Black', sans-serif;
+        }
+    </style>
+
+    <!-- Custom styling -->
+    <style>
+        :root{
+            --accent-blue: #dcecf7; /* footer & thin bar color */
+            --accent-red: #b73a30;  /* call-to-action color */
+            --text-main: #111;
+            --muted: #666;
+            --page-max: 1100px;
+        }
+
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            color:var(--text-main);
+            background:#fff;
+        }
+
+        /* ---------- NAVBAR ---------- */
+        .navbar {
+            background: #fff;
+            border-bottom: 3.3px solid var(--accent-blue); /* ~5% tykkere end før */
+            box-shadow:none;
+        }
+        .navbar-brand img{ height:58px; width:auto; display:block; }
+        .nav-link{
+            color: #111 !important;
+            font-weight:600;
+            text-transform:uppercase;
+            letter-spacing:0.6px;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            font-size:0.95rem;
+        }
+        .nav-link:hover{ color:var(--accent-red) !important; text-decoration:none; }
+
+        /* small thin light line under certain headings */
+        .thin-line{
+            height:4px;
+            width:160px;
+            background:linear-gradient(90deg, var(--accent-blue), rgba(0,0,0,0));
+            margin:0.75rem 0 1.25rem 0;
+            border-radius:2px;
+        }
+
+        /* ---------- MAIN CONTENT (kept simple so you can add more) ---------- */
+        main{
+            min-height:60vh;
+            padding:3.5rem 0;
+        }
+
+        .page {
+            max-width: var(--page-max);
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* Hero-like large title row similar to screenshot */
+        .main-title {
+            font-size: clamp(2rem, 4.6vw, 3.2rem); /* big and responsive */
+            font-weight:900;
+            line-height:1.02;
+            margin: 1rem 0 1.25rem 0;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #dcecf7;
+            color: #000;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer h6 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #000;
+            font-size: 1.4rem;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: #b40000;
+        }
+
+
+        .infobox {
+            background: #d7f2ff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .carousel-item img{
+            max-height: 700px;
+            object-fit: cover;
+            max-width: 800px;
+
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="Images/Logo.png" alt="DMJU Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Forside</a></li>
+                <li class="nav-item"><a href="info.html" class="nav-link">Info om DMJU</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Nyheder</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Kontakt</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Galleri</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Billeder af togene -->
+<div class="container mt-4">  <!-- Container under navbar -->
+    <div class="row">           <!-- Bootstrap række -->
+        <div class="col-md-4">     <!-- Kolonne 1: tager 4 af 12 kolonner -->
+            <img src="Images/Billede1.png" class="img-fluid" alt="Billede 1" />
+        </div>
+        <div class="col-md-4">     <!-- Kolonne 2 -->
+            <img src="Images/Billede2.png" class="img-fluid" alt="Billede 2" />
+        </div>
+        <div class="col-md-4">     <!-- Kolonne 3 -->
+            <img src="Images/Billede3.png" class="img-fluid" alt="Billede 3" />
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="headline">DMJU FOTOKONKURRENCE</div>
+            <div class="section-title">KRAV FOR DELTAGELSE:</div>
+            <ul>
+                <li>Synligt tog og skinner skal være på billedet.</li>
+                <li>Indsend billeder fra jeres anlæg/moduler, hvor der indgår det tema som er aktuelt for konkurrencen samt skinner eller tog.</li>
+                <li>Et billede af en situation der fortæller om hverdagen langs banen.</li>
+                <li>Billeder af små eller store anlæg og moduler.</li>
+                <li>Billederne tages fra kreative vinkler, som kan inspirere andre modeljernbane entusiaster.</li>
+                <li>Klubber der ikke har et fast anlæg, kan evt. sende et billede af det de moduler de bruger på udstillinger.</li>
+                <li>Der må indsendes max. 3 stk. fotos fra hver deltagende klub, af klubbens eget anlæg, og de bliver lagt på en side, hvor alle DMJU’s medlemsklubber derefter kan af give en stemme til det billede man synes bedst om. Det er kun muligt at stemme én gang pr. klub og man kan ikke på egene billeder.</li>
+            </ul>
+            <div class="section-title">SPECIFIKATIONER:</div>
+            <ul>
+                <li>Fotos skal være i høj opløsning i standard JPG-format, vedhæftet i en E-Mail, (ikke sat ind i E-Mail), andre billede formater, kan ikke bruges på hjemmesiden. </li>
+                <li>Ved indsendelsen til konkurrencen giver fotografen samtidig tilladelse til at DMJU må anvende, fotoet til ikke kommercielle markedsføringsformål i brochurer, annoncer og lignende.</li>
+                <li>Alle klubber kan sende billeder/foto, får et lod, og de klubber der stemmer, får også et lod. </li>
+                <li>Der trækkes lod om minimum 5 stk. gavekort, på førstkommende MODELTOG FOR ALLE. </li>
+                <li>Gavekortene kan indløses hos DMJU’s sponsorer (modeljernbane forhandlere).</li>
+                <li>Fotos sendes elektronisk til fotokonkurrence@dmju.dk, og e-mailen skal indeholde oplysninger om navn på klubben, navn på fotografen, og navn på kontaktperson fra klubben. Hvert foto skal være mærket med en let identifikation i form af filnavn, f.eks. Jysk Model Jernbane Klub.jpg</li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <div class="infobox mb-3">
+                <strong>Årets tema:</strong><br>
+                “Under broen”
+            </div>
+            <div class="infobox mb-3">
+                <strong>Præmier</strong><br>
+                1. Plads: 750,00 kr.<br>
+                2. Plads: 500,00 kr.<br>
+                3. Plads: 250,00 kr.
+            </div>
+            <div class="infobox mb-3">
+                <strong>VIGTIG INFO</strong><br>
+                Sidste frist for indsendelse af foto: <br>1. Januar 2025<br>
+                Sidste frist for afstemning af fotos: <br>31. December 2025<br>
+                <hr>
+                For spørgsmål kan du kontakte DMJU via mail: <br>
+                <a href="mailto:fotokonkurrence@dmju.dk">fotokonkurrence@dmju.dk</a>
+            </div>
+            </div>
+    </div>
+</div>
+
+<!--Billede karousel -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="Images/Billede%201.1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="Images/Group%203.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Forrige</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Næste</span>
+    </button>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-3">
+                <h6>Kontakt os her</h6>
+                <p class="mb-1">Tlf.: +45 25 73 80 05</p>
+                <p>Adresse: Frederik Andersensvej 13, Kalundborg</p>
+                <div class="social-links">
+                    <a href="facebook.com/dmju.dk" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="instagram.com/danskmodeljernbaneunion/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h6>Links</h6>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="#">Persondata politik</a></li>
+                    <li><a href="#">MOROP & NEM Normer</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h6>Tilmeld til nyhedsbrev</h6>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="E-mail">
+                    <button class="btn btn-danger">Tilmeld</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
